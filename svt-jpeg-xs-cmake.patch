@@ -1,0 +1,37 @@
+diff -Naur SVT-JPEG-XS-0.9.0.old/CMakeLists.txt SVT-JPEG-XS-0.9.0/CMakeLists.txt
+--- SVT-JPEG-XS-0.9.0.old/CMakeLists.txt	2026-02-16 16:00:30.667390592 +0100
++++ SVT-JPEG-XS-0.9.0/CMakeLists.txt	2026-02-16 16:00:43.020941955 +0100
+@@ -3,7 +3,7 @@
+ # SPDX - License - Identifier: BSD - 2 - Clause - Patent
+ #
+ 
+-cmake_minimum_required(VERSION 3.5)
++cmake_minimum_required(VERSION 3.5...3.10)
+ 
+ if("${CMAKE_CURRENT_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
+     message(WARNING "Building in-source is highly not recommended\n"
+diff -Naur SVT-JPEG-XS-0.9.0.old/third_party/cpuinfo/CMakeLists.txt SVT-JPEG-XS-0.9.0/third_party/cpuinfo/CMakeLists.txt
+--- SVT-JPEG-XS-0.9.0.old/third_party/cpuinfo/CMakeLists.txt	2026-02-16 16:00:30.694670672 +0100
++++ SVT-JPEG-XS-0.9.0/third_party/cpuinfo/CMakeLists.txt	2026-02-16 16:00:59.687416896 +0100
+@@ -1,4 +1,4 @@
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.12 FATAL_ERROR)
++CMAKE_MINIMUM_REQUIRED(VERSION 2.8.12...3.10)
+ 
+ if(POLICY CMP0063)
+   cmake_policy(SET CMP0063 NEW)
+diff -Naur SVT-JPEG-XS-0.9.0.old/third_party/cpuinfo/deps/clog/CMakeLists.txt SVT-JPEG-XS-0.9.0/third_party/cpuinfo/deps/clog/CMakeLists.txt
+--- SVT-JPEG-XS-0.9.0.old/third_party/cpuinfo/deps/clog/CMakeLists.txt	2026-02-16 16:00:30.694917828 +0100
++++ SVT-JPEG-XS-0.9.0/third_party/cpuinfo/deps/clog/CMakeLists.txt	2026-02-16 16:01:25.383275588 +0100
+@@ -1,4 +1,4 @@
+-CMAKE_MINIMUM_REQUIRED(VERSION 3.1 FATAL_ERROR)
++CMAKE_MINIMUM_REQUIRED(VERSION 3.1...3.10)
+ 
+ INCLUDE(GNUInstallDirs)
+ 
+@@ -48,4 +48,4 @@
+   TARGET_COMPILE_DEFINITIONS(clog PRIVATE CLOG_LOG_TO_STDIO=1)
+ ELSE()
+   TARGET_COMPILE_DEFINITIONS(clog PRIVATE CLOG_LOG_TO_STDIO=0)
+-ENDIF()
+\ No newline at end of file
++ENDIF()
