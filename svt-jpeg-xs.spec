@@ -10,6 +10,7 @@ Release:        1%{?dist}
 Summary:        Intel SVT implementation of ISO/IEC 21122 protocol
 License:        BSD-2-Clause-Patent
 URL:            https://github.com/OpenVisualCloud/SVT-JPEG-XS
+ExclusiveArch:  x86_64
 
 %if 0%{?tag:1}
 Source0:        %{url}/archive/v%{version}/SVT-JPEG-XS-v%{version}.tar.gz
